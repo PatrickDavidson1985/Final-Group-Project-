@@ -10,7 +10,7 @@ $nameErr = $breedErr = $numberErr = $genderErr = $weightErr = $commentErr = "";
 $name = $breed = $number = $gender = $weight = $comment = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    
+  
     // Validation of Name
     if (empty($_POST["name"])){
         $nameErr = "Required";
@@ -37,7 +37,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $numberErr = "Required";
     } else{
         $number = test_input($_POST["age"]);
-        if (!preg_match('/^[0-9]{10}+$/',$number)) {
+        if (!is_numeric($number)) {
             $numberErr = "Only numbers allowed";
         }
     }
@@ -100,28 +100,28 @@ function test_input($data) {
 <form method="post" action="<?php echo htmlspecialchars ($_SERVER["PHP_SELF"]);?>">
 
     <div id="form">
-        <form id="name">
+         <div id="name">
             <div class="inputBox">
                 <input type="text" name="name" value="<?php echo $name;?>" placeholder="Dog's Name">
                 <span class="error">* <?php echo $nameErr;?></span>
             </div>
-        </form>
+         </div>
         <br>
 
-        <form id="breed">
+        <div id="breed">
             <div class="inputBox">
-                <input type="text" name="breed" value="<?php echo $breed;?>" placeholder="Dog's Breed">
+                <input type="text" name="breed" placeholder="Dog's Breed">
                 <span class="error">* <?php echo $breedErr;?></span>
             </div>
-        </form>
+</div>
         <br>
 
-        <form id="age">
+        <div id="age">
             <div class="inputBox">
                 <input type="text" name="age" value="<?php echo $number;?>" placeholder="Dog's Age (Human Yrs)">
                 <span class="error">* <?php echo $numberErr;?></span>
             </div>
-        </form>
+</div>
         <br>
 
         <div id="gender"> <p>Gender <span class="error">* <?php echo $genderErr;?></span></p>
