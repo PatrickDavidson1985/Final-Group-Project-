@@ -1,4 +1,9 @@
 <!-- Name -R, Address -R, Email -R, Phone Number -R, Fenced yard -R, other pets in home, children?  -->
+<?php
+
+?>
+
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -6,81 +11,152 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="form.css">
+    <link rel="stylesheet" href="./form-app.css">
+    <script src="https://kit.fontawesome.com/ffcfe413d5.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
     <title>Form Page</title>
 </head>
 
 <body>
 
-    <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+    <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>
 
         <div id="form">
+            <h1>Application Form</h1>
+            <br>
+
+            <h4 class="required"><i class="fas fa-paw"></i> Required</h4>
+            <br>
+            <br>
             <div id="name">
-                <div class="inputBox"> <p>Name:</p>
-                    <input type="text" name="name" value="<?php echo $name; ?>">
-                    <span class="error">* <?php echo $nameErr; ?></span>
+                <div class="inputBox">
+                    <input type="text" class="box" name="name" value="<?php echo $name; ?>" placeholder="Your Name">
+                    <span class="error"><i class="fas fa-paw"></i> <?php echo $nameErr; ?></span>
                 </div>
             </div>
             <br>
 
             <div id="address">
-                <div class="inputBox"> <p>Address:</p>
-                    <input type="text" name="address" value="<?php echo $address; ?>">
-                    <span class="error">* <?php echo $addressErr; ?></span>
+                <input type="text" class="box" name="address" placeholder="Street Address" />
+                <span class="error"><i class="fas fa-paw"></i>
+                <input type="text" class="box" name="city" placeholder="City" />
+                <span class="error"><i class="fas fa-paw"></i>
+
+            
+                <select name="state"  class="state" >
+                    <option value="AL">Alabama</option>
+                    <option value="AK">Alaska</option>
+                    <option value="AZ">Arizona</option>
+                    <option value="AR">Arkansas</option>
+                    <option value="CA">California</option>
+                    <option value="CO">Colorado</option>
+                    <option value="CT">Connecticut</option>
+                    <option value="DE">Delaware</option>
+                    <option value="DC">District Of Columbia</option>
+                    <option value="FL">Florida</option>
+                    <option value="GA">Georgia</option>
+                    <option value="HI">Hawaii</option>
+                    <option value="ID">Idaho</option>
+                    <option value="IL">Illinois</option>
+                    <option value="IN">Indiana</option>
+                    <option value="IA">Iowa</option>
+                    <option value="KS">Kansas</option>
+                    <option value="KY">Kentucky</option>
+                    <option value="LA">Louisiana</option>
+                    <option value="ME">Maine</option>
+                    <option value="MD">Maryland</option>
+                    <option value="MA">Massachusetts</option>
+                    <option value="MI">Michigan</option>
+                    <option value="MN">Minnesota</option>
+                    <option value="MS">Mississippi</option>
+                    <option value="MO">Missouri</option>
+                    <option value="MT">Montana</option>
+                    <option value="NE">Nebraska</option>
+                    <option value="NV">Nevada</option>
+                    <option value="NH">New Hampshire</option>
+                    <option value="NJ">New Jersey</option>
+                    <option value="NM">New Mexico</option>
+                    <option value="NY" selected=yes>New York</option>
+                    <option value="NC">North Carolina</option>
+                    <option value="ND">North Dakota</option>
+                    <option value="OH">Ohio</option>
+                    <option value="OK">Oklahoma</option>
+                    <option value="OR">Oregon</option>
+                    <option value="PA">Pennsylvania</option>
+                    <option value="RI">Rhode Island</option>
+                    <option value="SC">South Carolina</option>
+                    <option value="SD">South Dakota</option>
+                    <option value="TN">Tennessee</option>
+                    <option value="TX">Texas</option>
+                    <option value="UT">Utah</option>
+                    <option value="VT">Vermont</option>
+                    <option value="VA">Virginia</option>
+                    <option value="WA">Washington</option>
+                    <option value="WV">West Virginia</option>
+                    <option value="WI">Wisconsin</option>
+                    <option value="WY">Wyoming</option>
+                    
+
+                    <input type="text" id="zipcode" class="box" name="zipcode" placeholder="Zip Code" maxlength="5" /><span
+                        class="error"><i class="fas fa-paw"></i> <?php echo $nameErr; ?></span>
+            </div>
+            <br>
+
+            <div id="email">
+                <div class="inputBox">
+                    <input type="text" class="box" name="email" value="<?php echo $email; ?>"
+                        placeholder="Email Address">
+                    <span class="error"><i class="fas fa-paw"></i> <?php echo $emailErr; ?></span>
                 </div>
             </div>
             <br>
 
-            <div id="Email">
-                <div class="inputBox"> <p>Email:</p>
-                    <input type="text" name="email" value="<?php echo $email; ?>">
-                    <span class="error">* <?php echo $emailErr; ?></span>
+            <div id="number">
+                <div class="inputBox">
+                    <input type="text" class="box" name="number" value="<?php echo $number; ?>"
+                        placeholder="Phone Number">
+                    <span class="error"><i class="fas fa-paw"></i> <?php echo $numberErr; ?></span>
                 </div>
             </div>
             <br>
 
-            <div id="child">
-                <p>Children in home: <span class="error">* <?php echo $genderErr; ?></span></p>
-                <li><input type="radio" name="child" <?php if (isset($gender)  && $child == "yes") echo "checked"; ?> value="yes"> Yes</li>
-                <li><input type="radio" name="child" <?php if (isset($gender)  && $child == "no") echo "checked"; ?> value="no"> No</li>
+
+            <div id="children">
+                <p>Children: <span class="error"><i class="fas fa-paw"></i> <?php echo $childErr; ?></span>
+                <ul><input type="radio" name="child" <?php if (isset($child)  && $child == "yes") echo "checked"; ?>
+                        value="yes"> Yes</ul>
+                <ul><input type="radio" name="child" <?php if (isset($child)  && $child == "no") echo "checked"; ?>
+                        value="no"> No</ul>
 
             </div>
             <br>
 
-            <div id="weight">
-                <p>Size <span class="error">* <?php echo $weightErr; ?></span> </p>
-                <li><input type="radio" name="weight" <?php if (isset($weight)  && $weight == "small") echo "checked"; ?> value="small"> > 10 lbs</li>
-                <li><input type="radio" name="weight" <?php if (isset($weight)  && $weight == "medium") echo "checked"; ?> value="medium"> 10 - 25 lbs</li>
-                <li><input type="radio" name="weight" <?php if (isset($weight)  && $weight == "large") echo "checked"; ?> value="large"> 26 - 50 lbs</li>
-                <li><input type="radio" name="weight" <?php if (isset($weight)  && $weight == "xlarge") echo "checked"; ?> value="xlarge">
-                    < 50 lbs</li> <!-- <select id="selectWeight">
-                        <option value="size">Size</option>
-                        <option value="S">Small (> 10 lbs)</option>
-                        <option value="M">Medium (11 - 25 lbs)</option>
-                        <option value="L">Large (26 - 50 lbs)</option>
-                        <option value="XL">X Large (< 51 lbs)</option> </select> -->
+            <div id="fence">
+                <p>Fenced Yard: <span class="error"><i class="fas fa-paw"></i> <?php echo $fenceErr; ?></span></p>
+                <ul><input type="radio" name="gender" <?php if (isset($fence)  && $fence == "yes") echo "checked"; ?>
+                        value="yes"> Yes</ul>
+                <ul><input type="radio" name="gender" <?php if (isset($fence)  && $fence == "no") echo "checked"; ?>
+                        value="no"> No</ul>
 
             </div>
             <br>
-
-            <!-- comment section -->
-            <div id="comment">
-                <p>Details about your dog:</p>
-                <textarea name="comment" rows="5" cols="40" placeholder="Required - Medicine needed, injuries, visits up to date?, etc"><?php echo $comment; ?></textarea>
+<br>
+            <div id="pets">
+                <p>Other Pets at Home: <span class="error"><i class="fas fa-paw"></i> <?php echo $petsErr; ?></span></p>
+                <ul><input type="radio" name="pets" <?php if (isset($pets)  && $pets == "yes") echo "checked"; ?>
+                        value="yes"> Yes</ul>
+                <ul><input type="radio" name="pets" <?php if (isset($pets)  && $pets == "no") echo "checked"; ?>
+                        value="no"> No</ul>
+                <div id="comment">
+                    <p>If Yes, please describe pets at home:</p>
+                    <textarea name="comment" class="ta" rows="5" cols="40"
+                        placeholder="Pets at home"><?php echo $comment; ?></textarea>
+                </div>
+                <div id="button">
+                    <input type="submit" class="submit" name="submit" value="Submit">
+                </div>
             </div>
-            <br>
 
-            <!-- upload image section -->
-            <form action="upload.php" method="post" enctype="multipart/form-data">
-                Select image to upload:
-                <input type="file" name="fileToUpload" id="fileToUpload">
-                <!-- fix below -->
-                <!-- <input type="submit" value="Upload Image" name="submit"> -->
-            </form>
-            <br>
-
-            <input type="submit" name="submit" value="Submit">
-        </div>
 
 
 
