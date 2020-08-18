@@ -1,103 +1,3 @@
-<!-- SECURITY - sanitze input, form submit, database,  -->
-
-<?php
-// $serverName = "localhost";
-// $userName = "root"; 
-// $password = "password";
-// $dataBase = "final_project_database";
-// // Create connection
-// $db = mysqli_connect('localhost','username','password','database_name');
-
-// if ($db->connect_error){
-//     die("Connection failed: ". $db->connect_error);
-// } echo "Connected successfully";
-
-
-
-
-?>
-
-<?php
-
-$nameErr = $breedErr = $numberErr = $genderErr = $weightErr = $commentErr = "";
-$name = $breed = $number = $gender = $weight = $comment = "";
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-
-    // Validation of Name
-    if (empty($_POST["name"])) {
-        $nameErr = "Required";
-    } else {
-        $name = test_input($_POST["name"]);
-        if (!preg_match("/^[a-zA-Z ]*$/", $name)) {
-            $nameErr = "Only letters and white space allowed";
-        }
-    }
-
-    // Validation of Breed 
-    if (empty($_POST["breed"])) {
-        $breedErr = "Required";
-    } else {
-        $breed = test_input($_POST["breed"]);
-        if (!preg_match("/^[a-zA-Z ]*$/", $breed)) {
-            $breedErr = "Only letters and white space allowed";
-        }
-    }
-
-
-    // Validation of Age  
-    if (empty($_POST["age"])) {
-        $numberErr = "Required";
-    } else {
-        $number = test_input($_POST["age"]);
-        if (!is_numeric($number)) {
-            $numberErr = "Only numbers allowed";
-        }
-    }
-
-    // Validation of Gender
-    if (empty($_POST["gender"])) {
-        $genderErr = "Required";
-    } else {
-        $gender = test_input($_POST["gender"]);
-        if (!preg_match("/^[a-zA-Z ]*$/", $gender)) {
-            $genderErr = "Only letters and white space allowed";
-        }
-    }
-
-    //Validation of Size
-    if (empty($_POST["weight"])) {
-        $weightErr = "Required";
-    } else {
-        $weight = test_input($_POST["weight"]);
-        if (!preg_match("/^[a-zA-Z ]*$/", $weight)) {
-            $weightErr = "Only letters and white space allowed";
-        }
-    }
-
-    if (empty($_POST["comment"])) {
-        $comment = "";
-    } else {
-        $comment = test_input($_POST["comment"]);
-        if (!preg_match("/^[a-zA-Z ]*$/", $comment)) {
-            $commentErr = "Only letters and white space allowed";
-        }
-    }
-}
-
-function test_input($data)
-{
-    $data = trim($data);
-    $data = stripslashes($data);
-    $data = htmlspecialchars($data);
-    return $data;
-}
-
-?>
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -147,7 +47,7 @@ function test_input($data)
 
             <div id="gender">
                 <p>Gender <span class="error"><i class="fas fa-paw"></i> <?php echo $genderErr; ?></span></p>
-                <ul><input type="radio"  name="gender"
+                <ul><input type="radio" name="gender"
                         <?php if (isset($gender)  && $gender == "female") echo "checked"; ?> value="female"> Female</ul>
                 <ul><input type="radio"  name="gender" <?php if (isset($gender)  && $gender == "male") echo "checked"; ?>
                         value="male"> Male</ul>
