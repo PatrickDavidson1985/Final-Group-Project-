@@ -1,0 +1,92 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-image: url(https://images.unsplash.com/photo-1567459169668-95d355371bda?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1949&q=80);
+}
+
+/*nav styles*/
+
+nav .logo-position {
+  margin-left: 25px;
+}
+
+nav .nav-position {
+  margin-left: 75px;
+  display: flex;
+  justify-content: space-around;
+  font-size: 20px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+}
+
+nav li {
+  padding: 20px;
+}
+/*end nav styles"*/
+
+/*index/ home page style*/
+
+.container .carousel {
+  margin-top: 20px;
+  height: 150px;
+  background-color: rgb(255, 255, 255, 0.7);
+  display: flex;
+  flex-direction: column;
+}
+
+.container .carousel h1,
+p {
+  display: flex;
+  justify-content: center;
+}
+
+.container h1 {
+  color: rgb(4, 94, 250);
+  font-size: 45px;
+  font-weight: bold;
+}
+
+.container .sub-heading {
+  color: rgb(4, 94, 250);
+  font-weight: bold;
+  font-size: 25px;
+}
+
+/*card group styles*/
+
+.card-groups-container {
+  margin-top: 20px;
+}
+
+.card-groups-container .second {
+  margin-top: 20px;
+}
+
+/* end index home page style*/
+
+/*about us page styles*/
+
+body .fire-hydrant-container {
+  margin-top: 25px;
+  margin-left: 45px;
+  display: flex;
+  flex-direction: row;
+}
+
+.fire-hydrant-container .text-box {
+  width: 850px;
+  background-color: rgb(255, 255, 255, 0.7);
+}
+
+.fire-hydrant-container .text-box p {
+  color: rgb(4, 94, 250);
+  font-size: 30px;
+  font-weight: bold;
+  align-content: center;
+}
