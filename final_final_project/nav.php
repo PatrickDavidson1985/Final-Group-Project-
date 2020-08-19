@@ -1,7 +1,7 @@
 
 
  <nav class="navbar navbar-expand-md bg-primary container-fluid-nav">
-    <a class="navbar-brand logo-position"></a> <img src="./images/logo-trans.png"
+    <a class="navbar-brand logo-position"></a> <img src="final_final_project/image/logo-trans.png"
       alt="image of logo, a paw print with text reading resuce me">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
