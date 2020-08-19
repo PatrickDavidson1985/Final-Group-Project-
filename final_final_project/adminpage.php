@@ -4,7 +4,7 @@
 
 $servername = "127.0.0.1";
 $username = "root";
-$password = "password";
+$password = "password!";
 $db = "final_project_database";
 // create connection
 $connection =  mysqli_connect($servername,$username,$password,$db);
@@ -30,6 +30,58 @@ else{
  else {
      echo "0 results";
  }
+
+// w3 schools practice code below 
+
+//  create connection
+// $servername = "127.0.0.1";
+// $username = "root";
+// $password = "password";
+// $db = "final_project_database";
+
+// $connection =  mysqli_connect($servername,$username,$password,$db);
+//  // Check connection
+//  if (mysqli_connect_errno())
+//  {
+//  echo "Failed to connect to MySQL: " . mysqli_connect_error();
+//  }
+ 
+//  $result = mysqli_query($con,"SELECT * FROM content");
+ 
+//  echo "<table border='1'>
+//  <tr>
+//  <th>id</th>
+//  <th>petname</th>
+//  <th>breed</th>
+//  <th>age</th>
+//  <th>comments</th>
+//  <th>image</th>
+//  <th>date_added</th>
+//  <th>gender</th>
+//  <th>size</th>
+//  <th>adopt_status</th>
+//  </tr>";
+ 
+//  while($row = mysqli_fetch_array($result))
+//  {
+//  echo "<tr>";
+//  echo "<td>" . $row['id'] . "</td>";
+//  echo "<td>" . $row['pet_name'] . "</td>";
+//  echo "<td>" . $row['breed'] . "</td>";
+//  echo "<td>" . $row['age'] . "</td>";
+//  echo "<td>" . $row['comments'] . "</td>";
+//  echo "<td>" . $row['image'] . "</td>";
+//  echo "<td>" . $row['date_added'] . "</td>";
+//  echo "<td>" . $row['gender'] . "</td>";
+//  echo "<td>" . $row['size'] . "</td>";
+//  echo "<td>" . $row['adopt_status'] . "</td>";
+//  echo "</tr>";
+//  }
+//  echo "</table>";
+ 
+//  mysqli_close($con);
+
+
 ?>
 
 <!DOCTYPE html>
