@@ -1,3 +1,37 @@
+
+
+<?php
+
+$servername = "127.0.0.1";
+$username = "root";
+$password = "password";
+$db = "final_project_database";
+// create connection
+$connection =  mysqli_connect($servername,$username,$password,$db);
+ // check connection
+if(!$connection){
+    echo "Connection failed: " . mysqli_connect_error();
+}
+else{
+    echo "The connection was successful";
+ }
+
+ $sql = "SELECT id, pet_name, breed, age, content, image, date_added FROM content";
+ //$result = $conn->query($sql);
+ $result = mysqli_query($connection,$sql);
+
+
+ if (mysqli_num_rows($result) > 0) {
+     //output data of each row
+     while($row = mysqli_fetch_assoc($result)){
+         echo "id: " . $row["id"]. $row[" pet_name "] .$row["breed"]. $row[" "] . $row["age"].$row["content"].$row["image"].$row["date_added"]. "<br>";
+     }
+ }
+ else {
+     echo "0 results";
+ }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
