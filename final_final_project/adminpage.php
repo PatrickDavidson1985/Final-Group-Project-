@@ -16,7 +16,7 @@ else{
     echo "The connection was successful";
  }
 
- $sql = "SELECT id, pet_name, breed, age, content, image, date_added FROM content";
+ $sql = "SELECT id, pet_name, breed, age, comments, image, date_added, gender, size, adopt_status FROM content";
  //$result = $conn->query($sql);
  $result = mysqli_query($connection,$sql);
 
@@ -24,7 +24,7 @@ else{
  if (mysqli_num_rows($result) > 0) {
      //output data of each row
      while($row = mysqli_fetch_assoc($result)){
-         echo "id: " . $row["id"]. $row[" pet_name "] .$row["breed"]. $row[" "] . $row["age"].$row["content"].$row["image"].$row["date_added"]. "<br>";
+         echo "id: " . $row["id"]. $row[" pet_name "] .$row["breed"]. $row[" "] . $row["age"].$row["comments"].$row["image"].$row["date_added"].$row["gender"]. $row["size"].$row["adopt_status"]. "<br>";
      }
  }
  else {
