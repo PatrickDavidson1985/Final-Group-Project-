@@ -1,0 +1,213 @@
+<!-- SECURITY - sanitze input, form submit, database,  -->
+
+<?php
+// $serverName = "localhost";
+// $userName = "root"; 
+// $password = "password";
+// $dataBase = "final_project_database";
+// // Create connection
+// $db = mysqli_connect('localhost','username','password','database_name');
+
+// if ($db->connect_error){
+//     die("Connection failed: ". $db->connect_error);
+// } echo "Connected successfully";
+
+
+
+
+?>
+
+<?php
+
+$nameErr = $breedErr = $numberErr = $genderErr = $weightErr = $commentErr = "";
+$name = $breed = $number = $gender = $weight = $comment = "";
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+    // Validation of Name
+    if (empty($_POST["name"])) {
+        $nameErr = "Required";
+    } else {
+        $name = test_input($_POST["name"]);
+        if (!preg_match("/^[a-zA-Z ]*$/", $name)) {
+            $nameErr = "Only letters and white space allowed";
+        }
+    }
+
+    // Validation of Breed 
+    if (empty($_POST["breed"])) {
+        $breedErr = "Required";
+    } else {
+        $breed = test_input($_POST["breed"]);
+        if (!preg_match("/^[a-zA-Z ]*$/", $breed)) {
+            $breedErr = "Only letters and white space allowed";
+        }
+    }
+
+
+    // Validation of Age  
+    if (empty($_POST["age"])) {
+        $numberErr = "Required";
+    } else {
+        $number = test_input($_POST["age"]);
+        if (!is_numeric($number)) {
+            $numberErr = "Only numbers allowed";
+        }
+    }
+
+    // Validation of Gender
+    if (empty($_POST["gender"])) {
+        $genderErr = "Required";
+    } else {
+        $gender = test_input($_POST["gender"]);
+        if (!preg_match("/^[a-zA-Z ]*$/", $gender)) {
+            $genderErr = "Only letters and white space allowed";
+        }
+    }
+
+    //Validation of Size
+    if (empty($_POST["weight"])) {
+        $weightErr = "Required";
+    } else {
+        $weight = test_input($_POST["weight"]);
+        if (!preg_match("/^[a-zA-Z ]*$/", $weight)) {
+            $weightErr = "Only letters and white space allowed";
+        }
+    }
+
+    if (empty($_POST["comment"])) {
+        $comment = "";
+    } else {
+        $comment = test_input($_POST["comment"]);
+        if (!preg_match("/^[a-zA-Z ]*$/", $comment)) {
+            $commentErr = "Only letters and white space allowed";
+        }
+    }
+}
+
+function test_input($data)
+{
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
+}
+
+?>
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="form-reg.css">
+    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/ffcfe413d5.js" crossorigin="anonymous"></script>
+    <title>Form Registration Page</title>
+</head>
+
+<body>
+<?php include("nav.php"); ?>
+    <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+
+        <div id="form">
+            <h1>Registration Form</h1>
+            <br>
+            
+            <h4 class="required"><i class="fas fa-paw"></i>  Required</h4>
+            <br>
+            <br>
+            <div id="name">
+                <div class="inputBox">
+                    <input type="text" class="box" name="name" value="<?php echo $name; ?>" placeholder="Dog's Name">
+                    <span class="error"><i class="fas fa-paw"></i> <?php echo $nameErr; ?></span>
+                </div>
+            </div>
+            <br>
+
+            <div id="breed">
+                <div class="inputBox">
+                    <input type="text" class="box" name="breed" value="<?php echo $breed; ?>" placeholder="Dog's Breed">
+                    <span class="error"><i class="fas fa-paw"></i> <?php echo $breedErr; ?></span>
+                </div>
+            </div>
+            <br>
+
+            <div id="age">
+                <div class="inputBox">
+                    <input type="text" class="box" name="age" value="<?php echo $number; ?>" placeholder="Dog's Age (Human Yrs)">
+                    <span class="error"><i class="fas fa-paw"></i> <?php echo $numberErr; ?></span>
+                </div>
+            </div>
+            <br>
+
+            <div id="gender">
+                <p>Gender <span class="error"><i class="fas fa-paw"></i> <?php echo $genderErr; ?></span></p>
+                <ul><input type="radio"  name="gender"
+                        <?php if (isset($gender)  && $gender == "female") echo "checked"; ?> value="female"> Female</ul>
+                <ul><input type="radio"  name="gender" <?php if (isset($gender)  && $gender == "male") echo "checked"; ?>
+                        value="male"> Male</ul>
+
+            </div>
+            <br>
+
+            <div id="weight">
+                <p>Size <span class="error"><i class="fas fa-paw"></i> <?php echo $weightErr; ?></span> </p>
+                <ul><input type="radio" name="weight"
+                        <?php if (isset($weight)  && $weight == "small") echo "checked"; ?> value="small"> > 10 lbs</ul>
+                <ul><input type="radio" name="weight"
+                        <?php if (isset($weight)  && $weight == "medium") echo "checked"; ?> value="medium"> 10 - 25 lbs
+                </ul>
+                <ul><input type="radio" name="weight"
+                        <?php if (isset($weight)  && $weight == "large") echo "checked"; ?> value="large"> 26 - 50 lbs
+                </ul>
+                <ul><input type="radio" name="weight"
+                        <?php if (isset($weight)  && $weight == "xlarge") echo "checked"; ?> value="xlarge">
+                    < 50 lbs</ul>
+                        <!-- <select id="selectWeight">
+                        <option value="size">Size</option>
+                        <option value="S">Small (> 10 lbs)</option>
+                        <option value="M">Medium (11 - 25 lbs)</option>
+                        <option value="L">Large (26 - 50 lbs)</option>
+                        <option value="XL">X Large (< 51 lbs)</option> </select> -->
+
+            </div>
+            <br>
+
+            <!-- comment section -->
+            <div id="comment">
+                <p>Details about your dog:</p>
+                <textarea name="comment" class="ta" rows="5" cols="40"
+                    placeholder="Required - Medicine needed, injuries, visits up to date?, etc"><?php echo $comment; ?></textarea>
+            </div>
+            <br>
+
+            <!-- upload image section -->
+            <div id="photo">
+                <form action="upload.php" method="post" enctype="multipart/form-data">
+                    Select image to upload:
+                    <input type="file" name="fileToUpload" id="fileToUpload">
+                    <!-- fix below -->
+                    <!-- <input type="submit" value="Upload Image" name="submit"> -->
+                </form>
+            </div>
+            <br>
+            <br>
+            <div id="button">
+                <input type="submit" class="submit" name="submit" value="Submit">
+            </div>
+        </div>
+
+
+
+
+
+</body>
+
+</html>
