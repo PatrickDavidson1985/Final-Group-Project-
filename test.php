@@ -3,7 +3,7 @@
 //  create connection
 $servername = "127.0.0.1";
 $username = "root";
-$password = "Pat0713Dav!";
+$password = "password!!";
 $db = "final_project_database";
 
 $connection =  mysqli_connect($servername,$username,$password,$db);
