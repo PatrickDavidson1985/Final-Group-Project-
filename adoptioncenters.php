@@ -47,8 +47,8 @@ else{
 
 <?php
 
-$nameErr = $breedErr = $numberErr = $genderErr = $weightErr = $commentErr = "";
-$name = $breed = $number = $gender = $weight = $comment = "";
+$nameErr = $breedErr = $numberErr = $genderErr = $sizeErr = $commentsErr = "";
+$name = $breed = $number = $gender = $size = $comments = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
@@ -94,21 +94,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     //Validation of Size
-    if (empty($_POST["weight"])) {
-        $weightErr = "Required";
+    if (empty($_POST["size"])) {
+        $sizeErr = "Required";
     } else {
-        $weight = test_input($_POST["weight"]);
-        if (!preg_match("/^[a-zA-Z ]*$/", $weight)) {
-            $weightErr = "Only letters and white space allowed";
+        $size = test_input($_POST["size"]);
+        if (!preg_match("/^[a-zA-Z ]*$/", $size)) {
+            $sizeErr = "Only letters and white space allowed";
         }
     }
 
-    if (empty($_POST["comment"])) {
-        $comment = "";
+    if (empty($_POST["comments"])) {
+        $comments = "";
     } else {
-        $comment = test_input($_POST["comment"]);
-        if (!preg_match("/^[a-zA-Z ]*$/", $comment)) {
-            $commentErr = "Only letters and white space allowed";
+        $comments = test_input($_POST["comments"]);
+        if (!preg_match("/^[a-zA-Z ]*$/", $comments)) {
+            $commentsErr = "Only letters and white space allowed";
         }
     }
 }
@@ -133,7 +133,7 @@ function test_input($data)
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form Registration Page</title>
-    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="./styles/footer.css">
     <link rel="stylesheet" href="./styles/form-reg.css" type="text/css">
     <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -187,18 +187,18 @@ function test_input($data)
             </div>
             <br>
 
-            <div id="weight">
-                <p>Size <span class="error"><i class="fas fa-paw"></i> <?php echo $weightErr; ?></span> </p>
-                <ul><input type="radio" name="weight"
-                        <?php if (isset($weight)  && $weight == "small") echo "checked"; ?> value="small"> > 10 lbs</ul>
-                <ul><input type="radio" name="weight"
-                        <?php if (isset($weight)  && $weight == "medium") echo "checked"; ?> value="medium"> 10 - 25 lbs
+            <div id="size">
+                <p>Size <span class="error"><i class="fas fa-paw"></i> <?php echo $sizeErr; ?></span> </p>
+                <ul><input type="radio" name="size"
+                        <?php if (isset($size)  && $size == "small") echo "checked"; ?> value="small"> > 10 lbs</ul>
+                <ul><input type="radio" name="size"
+                        <?php if (isset($size)  && $size == "medium") echo "checked"; ?> value="medium"> 10 - 25 lbs
                 </ul>
-                <ul><input type="radio" name="weight"
-                        <?php if (isset($weight)  && $weight == "large") echo "checked"; ?> value="large"> 26 - 50 lbs
+                <ul><input type="radio" name="size"
+                        <?php if (isset($size)  && $size == "large") echo "checked"; ?> value="large"> 26 - 50 lbs
                 </ul>
-                <ul><input type="radio" name="weight"
-                        <?php if (isset($weight)  && $weight == "xlarge") echo "checked"; ?> value="xlarge">
+                <ul><input type="radio" name="size"
+                        <?php if (isset($size)  && $size == "xlarge") echo "checked"; ?> value="xlarge">
                     < 50 lbs</ul>
                         <!-- <select id="selectWeight">
                         <option value="size">Size</option>
@@ -211,15 +211,20 @@ function test_input($data)
             <br>
 
             <!-- comment section -->
-            <div id="comment">
+            <div id="comments">
                 <p>Details about your dog:</p>
-                <textarea name="comment" class="ta" rows="5" cols="40"
-                    placeholder="Required - Medicine needed, injuries, visits up to date?, etc"><?php echo $comment; ?></textarea>
+                <textarea name="comments" class="ta" rows="5" cols="40"
+                    placeholder="Required - Medicine needed, injuries, visits up to date?, etc"><?php echo $comments; ?></textarea>
             </div>
             <br>
 
+            <!-- Date added section -->
+            <div id="date">
+            <input type="date" name="date-added" placeholder="Date Added">
+            </div>
+
             <!-- upload image section -->
-            <div id="photo">
+            <div id="image">
                 <form action="upload.php" method="post" enctype="multipart/form-data">
                     Select image to upload:
                     <input type="file" name="fileToUpload" id="fileToUpload">
