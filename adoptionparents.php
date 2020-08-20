@@ -84,23 +84,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <!DOCTYPE html>
 <html lang="en">
-<div></div>
+
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/form-app.css">
     <link rel="stylesheet" href="./styles/footer.css">
-  <link rel="stylesheet" href="./styles/finalproject.css">
+    <link rel="stylesheet" href="./styles/finalproject.css">
     <script src="https://kit.fontawesome.com/ffcfe413d5.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
     <title>Form Page</title>
 </head>
 
 <body>
+<?php include("nav.php"); ?>
 
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
 
-<?php include("nav.php"); ?>
   
  <div id="form">   
 
