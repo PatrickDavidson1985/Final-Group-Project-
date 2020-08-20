@@ -1,4 +1,4 @@
-
+echo '  
 
  <nav class="navbar navbar-expand-md bg-primary container-fluid-nav">
     <a class="navbar-brand logo-position"></a> <img src="./image/logo-trans.png"
@@ -35,3 +35,4 @@
     </div>
   </nav>
 
+';

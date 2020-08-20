@@ -55,4 +55,4 @@ echo '
         </div>
 
     </footer>
- ':
+ ';
