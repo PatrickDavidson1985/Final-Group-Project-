@@ -103,7 +103,7 @@ function test_input($data)
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adoption Centers</title>
-    <link rel="stylesheet" href="form-reg.css">
+    <link rel="stylesheet" href="./Final-Group-Project-/style.css">
     <link rel="stylesheet" href="finalproject.css">
     <script src="https://kit.fontawesome.com/ffcfe413d5.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -111,110 +111,24 @@ function test_input($data)
 </head>
 
 <body>
-<?php include("nav.php"); ?>
-
-<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
-
-<div id="form">
-    <h1>Registration Form</h1>
-    <br>
-    
-    <h4 class="required"><i class="fas fa-paw"></i>  Required</h4>
-    <br>
-    <br>
-    <div id="name">
-        <div class="inputBox">
-            <input type="text" class="box" name="name" value="<?php echo $name; ?>" placeholder="Dog's Name">
-            <span class="error"><i class="fas fa-paw"></i> <?php echo $nameErr; ?></span>
-        </div>
-    </div>
-    <br>
-
-    <div id="breed">
-        <div class="inputBox">
-            <input type="text" class="box" name="breed" value="<?php echo $breed; ?>" placeholder="Dog's Breed">
-            <span class="error"><i class="fas fa-paw"></i> <?php echo $breedErr; ?></span>
-        </div>
-    </div>
-    <br>
-
-    <div id="age">
-        <div class="inputBox">
-            <input type="text" class="box" name="age" value="<?php echo $number; ?>" placeholder="Dog's Age (Human Yrs)">
-            <span class="error"><i class="fas fa-paw"></i> <?php echo $numberErr; ?></span>
-        </div>
-    </div>
-    <br>
-
-    <div id="gender">
-        <p>Gender <span class="error"><i class="fas fa-paw"></i> <?php echo $genderErr; ?></span></p>
-        <ul><input type="radio"  name="gender"
-                <?php if (isset($gender)  && $gender == "female") echo "checked"; ?> value="female"> Female</ul>
-        <ul><input type="radio"  name="gender" <?php if (isset($gender)  && $gender == "male") echo "checked"; ?>
-                value="male"> Male</ul>
-
-    </div>
-    <br>
-
-    <div id="weight">
-        <p>Size <span class="error"><i class="fas fa-paw"></i> <?php echo $weightErr; ?></span> </p>
-        <ul><input type="radio" name="weight"
-                <?php if (isset($weight)  && $weight == "small") echo "checked"; ?> value="small"> > 10 lbs</ul>
-        <ul><input type="radio" name="weight"
-                <?php if (isset($weight)  && $weight == "medium") echo "checked"; ?> value="medium"> 10 - 25 lbs
-        </ul>
-        <ul><input type="radio" name="weight"
-                <?php if (isset($weight)  && $weight == "large") echo "checked"; ?> value="large"> 26 - 50 lbs
-        </ul>
-        <ul><input type="radio" name="weight"
-                <?php if (isset($weight)  && $weight == "xlarge") echo "checked"; ?> value="xlarge">
-            < 50 lbs</ul>
-                <!-- <select id="selectWeight">
-                <option value="size">Size</option>
-                <option value="S">Small (> 10 lbs)</option>
-                <option value="M">Medium (11 - 25 lbs)</option>
-                <option value="L">Large (26 - 50 lbs)</option>
-                <option value="XL">X Large (< 51 lbs)</option> </select> -->
-
-    </div>
-    <br>
-
-    <!-- comment section -->
-    <div id="comment">
-        <p>Details about your dog:</p>
-        <textarea name="comment" class="ta" rows="5" cols="40"
-            placeholder="Required - Medicine needed, injuries, visits up to date?, etc"><?php echo $comment; ?></textarea>
-    </div>
-    <br>
-
-    <!-- upload image section -->
-    <div id="photo">
-        <form action="upload.php" method="post" enctype="multipart/form-data">
-            Select image to upload:
-            <input type="file" name="fileToUpload" id="fileToUpload">
-            <!-- fix below -->
-            <!-- <input type="submit" value="Upload Image" name="submit"> -->
-        </form>
-    </div>
-    <br>
-    <br>
-    <div id="button">
-        <input type="submit" class="submit" name="submit" value="Submit">
-    </div>
-</div>
+<?php include("./nav.php"); ?>
 
 
 
-        <!--just a cute image i inserted, we can delete or replace-->     
 
-    <div class="dog-with-ball">
+
+
+
+        // <!--just a cute image i inserted, we can delete or replace-->     
+
+        <div class="dog-with-ball">
         <img src="./images/dogwithball.png">
     </div>
 
 
-    <?php include("form-reg.php"); ?>
+    <?php include("./form-reg.php");
 
-    <?php include("footer.php"); ?>
+     include("footer.php"); ?>
     
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
