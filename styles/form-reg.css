@@ -127,6 +127,7 @@ text-align: center;
 /* Submit button */
 #button {
   text-align: center;
+  padding-bottom: 30px;
   
 }
 .submit{
