@@ -238,3 +238,5 @@ function test_input($data)
 </body>
 
 </html>
+
+<!-- sanitization, escape output -->
