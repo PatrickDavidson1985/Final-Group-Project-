@@ -113,16 +113,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div id="name">
             <div class="inputBox">
                 <input type="text" class="box" name="name" value="<?php echo $name; ?>" placeholder="Your Name">
-                <span class="error"><i class="fas fa-paw"></i> <?php echo $nameErr; ?></span>
+                <span class="error"><i class="fas fa-paw"></i></span> <?php echo $nameErr; ?></span>
             </div>
         </div>
         <br>
 
         <div id="address">
             <input type="text" class="box" name="address" placeholder="Street Address" />
-            <span class="error"><i class="fas fa-paw"></i>
+            <span class="error"><i class="fas fa-paw"></i></span>
                 <input type="text" class="box" name="city" placeholder="City" />
-                <span class="error"><i class="fas fa-paw"></i>
+                <span class="error"><i class="fas fa-paw"></i></span>
 
 
                     <select name="state" class="state">
@@ -179,14 +179,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         <option value="WY">Wyoming</option>
 
 
-                        <input type="text" id="zipcode" class="box" name="zipcode" placeholder="Zip Code" maxlength="5" /><span class="error"><i class="fas fa-paw"></i> <?php echo $nameErr; ?></span>
+                        <input type="text" id="zipcode" class="box" name="zipcode" placeholder="Zip Code" maxlength="5" /><span class="error"><i class="fas fa-paw"></i></span> <?php echo $nameErr; ?></span>
         </div>
         <br>
 
         <div id="email">
             <div class="inputBox">
                 <input type="text" class="box" name="email" value="<?php echo $email; ?>" placeholder="Email Address">
-                <span class="error"><i class="fas fa-paw"></i> <?php echo $emailErr; ?></span>
+                <span class="error"><i class="fas fa-paw"></i></span> <?php echo $emailErr; ?></span>
             </div>
         </div>
         <br>
@@ -194,14 +194,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div id="number">
             <div class="inputBox">
                 <input type="text" class="box" name="number" value="<?php echo $number; ?>" placeholder="Phone Number">
-                <span class="error"><i class="fas fa-paw"></i> <?php echo $numberErr; ?></span>
+                <span class="error"><i class="fas fa-paw"></i></span> <?php echo $numberErr; ?></span>
             </div>
         </div>
         <br>
 
 
         <div id="children">
-            <p>Children: <span class="error"><i class="fas fa-paw"></i> <?php echo $childErr; ?></span>
+            <p>Children: <span class="error"><i class="fas fa-paw"></i></span> <?php echo $childErr; ?></span>
                 <ul><input type="radio" name="child" <?php if (isset($child)  && $child == "yes") echo "checked"; ?> value="yes"> Yes</ul>
                 <ul><input type="radio" name="child" <?php if (isset($child)  && $child == "no") echo "checked"; ?> value="no"> No</ul>
 
@@ -209,7 +209,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <br>
 
         <div id="fence">
-            <p>Fenced Yard: <span class="error"><i class="fas fa-paw"></i> <?php echo $fenceErr; ?></span></p>
+            <p>Fenced Yard: <span class="error"><i class="fas fa-paw"></i></span> <?php echo $fenceErr; ?></span></p>
             <ul><input type="radio" name="gender" <?php if (isset($fence)  && $fence == "yes") echo "checked"; ?> value="yes"> Yes</ul>
             <ul><input type="radio" name="gender" <?php if (isset($fence)  && $fence == "no") echo "checked"; ?> value="no"> No</ul>
 
@@ -217,7 +217,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <br>
         <br>
         <div id="pets">
-            <p>Other Pets at Home: <span class="error"><i class="fas fa-paw"></i> <?php echo $petsErr; ?></span></p>
+            <p>Other Pets at Home: <span class="error"><i class="fas fa-paw"></i></span> <?php echo $petsErr; ?></span></p>
             <ul><input type="radio" name="pets" <?php if (isset($pets)  && $pets == "yes") echo "checked"; ?> value="yes"> Yes</ul>
             <ul><input type="radio" name="pets" <?php if (isset($pets)  && $pets == "no") echo "checked"; ?> value="no"> No</ul>
             <div id="comment">
