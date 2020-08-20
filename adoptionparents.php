@@ -183,7 +183,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         <option value="WI">Wisconsin</option>
                         <option value="WY">Wyoming</option>
 
-
+<br>
                         <input type="text" id="zipcode" class="box" name="zipcode" placeholder="Zip Code" maxlength="5" /><span class="error"><i class="fas fa-paw"></i></span> <?php echo $nameErr; ?></span>
         </div>
         <br>
