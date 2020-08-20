@@ -133,7 +133,7 @@ function test_input($data)
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form Registration Page</title>
-    <link rel="stylesheet" href="form-reg.css" type="text/css">
+    <link rel="stylesheet" href="./styles/form-reg.css" type="text/css">
     <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -142,7 +142,7 @@ function test_input($data)
 
 <body>
 
-<?php include("./final_final_project/nav.php"); ?>
+<?php include("nav.php"); ?>
     <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
 
         <div id="form">
