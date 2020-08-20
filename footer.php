@@ -1,3 +1,4 @@
+<?php
 echo '  
 
     <footer>
@@ -6,7 +7,7 @@ echo '
             <div class="left box ">
 
                 <a href="# ">
-                    <h2>About us</h2>
+                    <h2>About Us</h2>
                 </a>
 
                 <div class="content ">
@@ -42,7 +43,7 @@ echo '
 
             <div class="right box ">
 
-                <a href="# ">
+                <a href="adminpage.php">
                     <h2>Admin</h2>
                 </a>
 
@@ -56,3 +57,4 @@ echo '
 
     </footer>
  ';
+ ?>

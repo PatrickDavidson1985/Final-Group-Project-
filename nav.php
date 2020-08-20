@@ -1,3 +1,5 @@
+<?php
+
 echo '  
 
  <nav class="navbar navbar-expand-md bg-primary container-fluid-nav">
@@ -18,11 +20,11 @@ echo '
           <a class="nav-link text-white" href="adoptioncenters.php"><i class="fas fa-user-friends">&nbsp;Adoption Centers</i></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white" href="adoptingparents.php"><i class="fas fa-dog">&nbsp;Adopting
+          <a class="nav-link text-white" href="adoptionparents.php"><i class="fas fa-dog">&nbsp;Adopting
               Parents</i></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white" href="gallery.php"><i class="fas fa-image">&nbsp;Gallery</i></a>
+          <a class="nav-link text-white" href="slideshow.php"><i class="fas fa-image">&nbsp;Gallery</i></a>
         </li>
         <li class="nav-item">
           <a class="nav-link text-white" href="aboutus.php"><i class="fas fa-bone">&nbsp;About Us</i></a>
@@ -36,3 +38,4 @@ echo '
   </nav>
 
 ';
+?>

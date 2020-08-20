@@ -23,7 +23,7 @@ body {
 .intro-slideshow img {
     border-radius: 15px;
     position: absolute;
-    top: 10%;
+    top: 20%;
     left: 15%;
     width: 70%;
     height: 80%;
@@ -33,7 +33,7 @@ body {
     transition: opacity 0.75s ease-in-out;
 }
 
-.intro .intro-main {
+    .intro .intro-main {
     height: 400px;
     color: rgb(175, 87, 4);
     border-radius: 5rem;
