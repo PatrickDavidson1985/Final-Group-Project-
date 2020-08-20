@@ -89,7 +89,7 @@ p {
 }
 
 /* Size options */
-#weight {
+#size {
   text-align: center;
   color: darkblue;
   font-size: 20px;
@@ -97,7 +97,7 @@ p {
 }
 
 /* comment box ID */
-#comment {
+#comments {
 text-align: center;
 }
 
@@ -113,7 +113,7 @@ text-align: center;
 }
 
 /* Photo text  */
-#photo {
+#image {
   text-align: center;
   color: darkblue;
   font-size: 20px;
@@ -122,6 +122,13 @@ text-align: center;
 
 .file {
   text-align: center;
+}
+
+#date {
+  text-align: center;
+  color: darkblue;
+  font-size: 20px;
+  font-family: 'Acme', sans-serif;
 }
 
 /* Submit button */

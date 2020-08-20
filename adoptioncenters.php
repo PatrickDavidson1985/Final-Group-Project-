@@ -222,6 +222,7 @@ function test_input($data)
             <div id="date">
             <input type="date" name="date-added" placeholder="Date Added">
             </div>
+            <br>
 
             <!-- upload image section -->
             <div id="image">
