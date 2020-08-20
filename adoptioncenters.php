@@ -52,13 +52,13 @@ $name = $breed = $number = $gender = $weight = $comment = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    // Validation of Name
-    if (empty($_POST["name"])) {
-        $nameErr = "Required";
+       // Validation of Name
+       if (empty($_POST["pet_name"])) {
+        $pet_nameErr = "Required";
     } else {
-        $name = test_input($_POST["name"]);
-        if (!preg_match("/^[a-zA-Z ]*$/", $name)) {
-            $nameErr = "Only letters and white space allowed";
+        $pet_name = test_input($_POST["pet_name"]);
+        if (!preg_match("/^[a-zA-Z ]*$/", $pet_name)) {
+            $pet_nameErr = "Only letters and white space allowed";
         }
     }
 
@@ -152,10 +152,10 @@ function test_input($data)
             <h4 class="required"><i class="fas fa-paw"></i>  Required</h4>
             <br>
             <br>
-            <div id="name">
+            <div id="pet_name">
                 <div class="inputBox">
-                    <input type="text" class="box" name="name" value="<?php echo $name; ?>" placeholder="Dog's Name">
-                    <span class="error"><i class="fas fa-paw"></i> <?php echo $nameErr; ?></span>
+                    <input type="text" class="box" name="pet_name" value="<?php echo $pet_name; ?>" placeholder="Dog's Name">
+                    <span class="error"><i class="fas fa-paw"></i> <?php echo $pet_nameErr; ?></span>
                 </div>
             </div>
             <br>
