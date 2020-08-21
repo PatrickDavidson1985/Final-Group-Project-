@@ -100,7 +100,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
 
-
         <div id="form">
 
             <h1>Application Form</h1>
@@ -122,7 +121,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <span class="error"><i class="fas fa-paw"></i>
                     <input type="text" class="box" name="city" placeholder="City" />
                     <span class="error"><i class="fas fa-paw"></i>
-
 
                         <select name="state" class="state">
                             <option value="AL">Alabama</option>
@@ -197,7 +195,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 </div>
             </div>
             <br>
-
 
             <div id="children">
                 <p>Children: <span class="error"><i class="fas fa-paw"></i> <?php echo $childErr; ?></span>

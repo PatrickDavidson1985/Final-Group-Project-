@@ -85,7 +85,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <!DOCTYPE html>
 <html lang="en">
 
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -116,23 +115,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <br>
             <div id="name">
                 <div class="inputBox">
-                    <input type="text" class="box" name="name" value="<?php echo $name; ?>" placeholder="Your Name">
+                    <input type="text" class="boxinput" name="name" value="<?php echo $name; ?>" placeholder="Your Name">
                     <span class="error"><i class="fas fa-paw"></i></span> <?php echo $nameErr; ?></span>
                 </div>
             </div>
             <br>
-
             <div id="address">
-                <input type="text" class="box" name="address" placeholder="Street Address" />
+              
+                <input type="text" class="boxinput" name="address" placeholder="Street Address" />
                 <span class="error"><i class="fas fa-paw"></i></span>
-                <input type="text" class="box" name="city" placeholder="City" />
+                
+                <input type="text" class="boxinput" name="city" placeholder="City" />
                 <span class="error"><i class="fas fa-paw"></i></span>
-
-<<<<<<< HEAD
-
-=======
-<br>
->>>>>>> c765d6705d3f522b5fb3be331fba5231a19a8a41
+                
                 <select name="state" class="state">
                     <option value="AL">Alabama</option>
                     <option value="AK">Alaska</option>
@@ -185,24 +180,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <option value="WV">West Virginia</option>
                     <option value="WI">Wisconsin</option>
                     <option value="WY">Wyoming</option>
-
-                    <br>
-<<<<<<< HEAD
-                    <input type="text" id="zipcode" class="box" name="zipcode" placeholder="Zip Code" maxlength="5" /><span class="error"><i class="fas fa-paw"></i></span> <?php echo $nameErr; ?></span>
+                </select>
+                
+                    <input type="text" id="zipcode" class="boxinput" name="zipcode" placeholder="Zip Code" maxlength="5" /><span class="error"><i class="fas fa-paw"></i></span> <?php echo $nameErr; ?></span>
             </div>
-=======
-                    </div>    
-                    <br>  
-<div> <input type="text" id="zipcode" class="zipcode" name="zipcode" placeholder="Zip Code" maxlength="5" /><span class="error"><i class="fas fa-paw"></i></span> <?php echo $nameErr; ?></span>
-</div>
-                    
-          
->>>>>>> c765d6705d3f522b5fb3be331fba5231a19a8a41
             <br>
-
             <div id="email">
                 <div class="inputBox">
-                    <input type="text" class="box" name="email" value="<?php echo $email; ?>" placeholder="Email Address">
+                    <input type="text" class="boxinput" name="email" value="<?php echo $email; ?>" placeholder="Email Address">
                     <span class="error"><i class="fas fa-paw"></i></span> <?php echo $emailErr; ?></span>
                 </div>
             </div>
@@ -210,12 +195,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             <div id="number">
                 <div class="inputBox">
-                    <input type="text" class="box" name="number" value="<?php echo $number; ?>" placeholder="Phone Number">
+                    <input type="text" class="boxinput" name="number" value="<?php echo $number; ?>" placeholder="Phone Number">
                     <span class="error"><i class="fas fa-paw"></i></span> <?php echo $numberErr; ?></span>
                 </div>
             </div>
             <br>
-
 
             <div id="children">
                 <p>Children: <span class="error"><i class="fas fa-paw"></i></span> <?php echo $childErr; ?></span>

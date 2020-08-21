@@ -149,12 +149,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 //  else {
 //      echo "0 results";
 //  }
-
-
-
 ?>
-
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -171,16 +166,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/ffcfe413d5.js" crossorigin="anonymous"></script>
 </head>
-
+<header><?php include("nav.php"); ?></header>
 <body>
 
-    <?php include("nav.php"); ?>
     <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
 
         <div id="form">
             <h1>Registration Form</h1>
             <br>
-
             <h4 class="required"><i class="fas fa-paw"></i> Required</h4>
             <br>
             <br>
@@ -212,10 +205,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <p>Gender <span class="error"><i class="fas fa-paw"></i> <?php echo $genderErr; ?></span></p>
                 <ul><input type="radio" name="gender" <?php if (isset($gender)  && $gender == "female") echo "checked"; ?> value="female"> Female</ul>
                 <ul><input type="radio" name="gender" <?php if (isset($gender)  && $gender == "male") echo "checked"; ?> value="male"> Male</ul>
-
             </div>
             <br>
-
             <div id="size">
                 <p>Size <span class="error"><i class="fas fa-paw"></i> <?php echo $sizeErr; ?></span> </p>
                 <ul><input type="radio" name="size" <?php if (isset($size)  && $size == "small") echo "checked"; ?> value="small"> > 10 lbs</ul>
@@ -230,44 +221,35 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         <option value="M">Medium (11 - 25 lbs)</option>
                         <option value="L">Large (26 - 50 lbs)</option>
                         <option value="XL">X Large (< 51 lbs)</option> </select> -->
-
             </div>
-            <br>
-
+           
             <!-- comment section -->
             <div id="comments">
                 <p>Details about your dog:</p>
                 <textarea name="comments" class="ta" rows="5" cols="40" placeholder="Required - Medicine needed, injuries, visits up to date?, etc"><?php echo $comments; ?></textarea>
             </div>
-            <br>
-
+            
             <!-- upload image section -->
             <div id="image">
-                Select image to upload:
+                <p>Image url:</p> 
                 <input type="text" name="image" id="fileToUpload">
                 <!-- fix below -->
                 <!-- <input type="submit" value="Upload Image" name="submit"> -->
-
             </div>
-
-            <br>
-
+            
             <!-- Date added section -->
             <div id="date">
+               <p> Date:</p>
                 <input type="date" name="date_added" placeholder="Date Added">
             </div>
             <br>
-
-
-
-
             <div id="button">
                 <input type="submit" class="submit" name="submit" value="Submit">
             </div>
         </div>
     </form>
 
-    <?php include("footer.php"); ?>
+    <footer><?php include("footer.php"); ?></footer>
 </body>
 
 </html>
