@@ -38,39 +38,48 @@ h1 {
 
 /* input placeholders */
 ::placeholder {
-  color: rgb(4, 94, 250);
-  text-align: center;
-  font-family: "Acme", sans-serif;
-}
+    color: rgb(4, 94, 250);
+    text-align: center;
+    font-family: 'Acme', sans-serif;
+  }
 
-/* inside input box */
-.box {
-  width: 50%;
-  height: 2.5rem;
-  color: darkblue;
-  font-size: 20px;
-  background-color: cornsilk;
-  font-family: "Acme", sans-serif;
-}
+  /* inside input box */
+.box  {
+    width: 50%;
+    height: 2.5rem;
+    color: darkblue;
+    font-size: 20px;
+    background-color: cornsilk;
+    font-family: 'Acme', sans-serif;
+  }
 
-.state {
-  width: 50%;
-  height: 2.5rem;
-  color: darkblue;
-  font-size: 20px;
-  background-color: cornsilk;
-  font-family: "Acme", sans-serif;
-}
+  .state  {
+    width: 50%;
+    height: 2.5rem;
+    color: darkblue;
+    font-size: 20px;
+    background-color: cornsilk;
+    font-family: 'Acme', sans-serif;
+  }
 
-p {
-  color: rgb(4, 94, 250);
-  text-shadow: 0 0.1rem 1px white;
-  font-size: 30px;
-  font-weight: bolder;
-  font-family: "Acme", sans-serif;
-}
+  .zipcode {
+    width: 50%;
+    height: 2.5rem;
+    color: darkblue;
+    font-size: 20px;
+    background-color: cornsilk;
+    font-family: 'Acme', sans-serif;
+  }
 
-/* Person name input box */
+  p {
+    color: rgb(4, 94, 250);
+    text-shadow: 0 0.10rem 1px white;
+    font-size: 30px;
+    font-weight: bolder;
+    font-family: 'Acme', sans-serif;
+  }
+
+  /* Person name input box */
 #name {
   text-align: center;
   max-width: 100%;

@@ -128,7 +128,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <input type="text" class="box" name="city" placeholder="City" />
                 <span class="error"><i class="fas fa-paw"></i></span>
 
+<<<<<<< HEAD
 
+=======
+<br>
+>>>>>>> c765d6705d3f522b5fb3be331fba5231a19a8a41
                 <select name="state" class="state">
                     <option value="AL">Alabama</option>
                     <option value="AK">Alaska</option>
@@ -183,8 +187,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <option value="WY">Wyoming</option>
 
                     <br>
+<<<<<<< HEAD
                     <input type="text" id="zipcode" class="box" name="zipcode" placeholder="Zip Code" maxlength="5" /><span class="error"><i class="fas fa-paw"></i></span> <?php echo $nameErr; ?></span>
             </div>
+=======
+                    </div>    
+                    <br>  
+<div> <input type="text" id="zipcode" class="zipcode" name="zipcode" placeholder="Zip Code" maxlength="5" /><span class="error"><i class="fas fa-paw"></i></span> <?php echo $nameErr; ?></span>
+</div>
+                    
+          
+>>>>>>> c765d6705d3f522b5fb3be331fba5231a19a8a41
             <br>
 
             <div id="email">
