@@ -33,7 +33,7 @@ $result = $conn->query($sql);
 <header><?php include("nav.php"); ?></header>
 <body>
     
-<h1 align="center">Update Rescue Me!</h1>
+<!-- <h5 align="center">Update Rescue Me!</h5> -->
 <table border="1" align="center" style="line-height:25px; ">
 <tr>
 

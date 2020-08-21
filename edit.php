@@ -67,6 +67,7 @@ if(isset($_POST['btn-update'])){
 <!doctype html>
 <html>
     <link rel="stylesheet" href="../styles/edit.css">
+    
 <body>
 
 <form method="post">
