@@ -1,0 +1,34 @@
+body {
+    text-align: center;
+    color: rgb(80, 0, 0);
+    background-color: blanchedalmond;
+    border: solid 10px rgb(80, 0, 0);
+}
+
+form input {
+    font-style: normal;
+    font-size: 1rem;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 600;
+}
+
+form label {
+    color: rgb(0, 54, 0);
+    font-size: 1.2rem;
+    font-weight: 600;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+form label img {
+    border-image: none;
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+}
+
+form h1 {
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 2rem;
+    font-weight: 800;
+}
