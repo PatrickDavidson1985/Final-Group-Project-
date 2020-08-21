@@ -62,6 +62,15 @@ h1  {
     font-family: 'Acme', sans-serif;
   }
 
+  .zipcode {
+    width: 50%;
+    height: 2.5rem;
+    color: darkblue;
+    font-size: 20px;
+    background-color: cornsilk;
+    font-family: 'Acme', sans-serif;
+  }
+
   p {
     color: rgb(4, 94, 250);
     text-shadow: 0 0.10rem 1px white;
