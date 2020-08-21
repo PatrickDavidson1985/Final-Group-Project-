@@ -33,14 +33,24 @@ body {
     transition: opacity 0.75s ease-in-out;
 }
 
+    .intro-main p {
+  
+    }
     .intro .intro-main {
-    height: 400px;
+    width: 175px;    
+    height: 100px;
     color: rgb(175, 87, 4);
-    border-radius: 5rem;
-    padding: .1rem .15rem;
+    background-color: rgb(255, 255, 255, 0.7);
+    border-radius: 50%;
+    padding-top: 15px;
     font-family: 'Petit Formal Script', cursive;
+    line-height: 15px;
     font-size: .25rem;
-    opacity: 0.5;
+    margin-bottom: 300px;
+    /*opacity: 0.5;*/
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .intro h1 {

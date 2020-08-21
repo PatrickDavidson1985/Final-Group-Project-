@@ -6,7 +6,7 @@ echo '
 
             <div class="left box ">
 
-                <a href="# ">
+                <a href="aboutus.php">
                     <h2>About Us</h2>
                 </a>
 
@@ -41,7 +41,7 @@ echo '
                 </div>
             </div>
 
-            <div class="right box ">
+            <div class="right box">
 
                 <a href="adminpage.php">
                     <h2>Admin</h2>
