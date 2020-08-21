@@ -35,8 +35,8 @@
 
         </div>
         <div class="intro-main">
-            <strong><p>RESCUE</p></strong>
-            <p>ME!</p>
+            <strong><p>RESCUE</p>
+            <p>ME!</p></strong>
 
         </div>
     </main>
