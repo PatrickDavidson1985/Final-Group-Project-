@@ -23,7 +23,7 @@ body {
 .intro-slideshow img {
     border-radius: 15px;
     position: absolute;
-    top: 20%;
+    top: 18%;
     left: 15%;
     width: 70%;
     height: 80%;
@@ -33,9 +33,7 @@ body {
     transition: opacity 0.75s ease-in-out;
 }
 
-    .intro-main p {
-  
-    }
+
     .intro .intro-main {
     width: 175px;    
     height: 100px;
@@ -46,7 +44,7 @@ body {
     font-family: 'Petit Formal Script', cursive;
     line-height: 15px;
     font-size: .25rem;
-    margin-bottom: 300px;
+    margin-bottom: 280px;
     /*opacity: 0.5;*/
     display: flex;
     justify-content: center;
