@@ -17,29 +17,27 @@ $username = "root";
 $password = "Murrda0629";
 $db = "final_project_database";
 // create connection
-$connection =  mysqli_connect($servername,$username,$password,$db);
- // check connection
-if(!$connection){
+$connection =  mysqli_connect($servername, $username, $password, $db);
+// check connection
+if (!$connection) {
     echo "Connection failed: " . mysqli_connect_error();
-}
-else{
+} else {
     echo "The connection was successful";
- }
+}
 
- $sql = "SELECT id, pet_name, breed, age, comments, image, date_added, gender, size, adopt_status FROM content";
- //$result = $conn->query($sql);
- $result = mysqli_query($connection,$sql);
+$sql = "SELECT id, pet_name, breed, age, comments, image, date_added, gender, size, adopt_status FROM content";
+//$result = $conn->query($sql);
+$result = mysqli_query($connection, $sql);
 
 
- if (mysqli_num_rows($result) > 0) {
-     //output data of each row
-     while($row = mysqli_fetch_assoc($result)){
-         echo "id: " . $row["id"]. $row[" pet_name "] .$row["breed"]. $row[" "] . $row["age"].$row["comments"].$row["image"].$row["date_added"].$row["gender"]. $row["size"].$row["adopt_status"]. "<br>";
-     }
- }
- else {
-     echo "0 results";
- }
+if (mysqli_num_rows($result) > 0) {
+    //output data of each row
+    while ($row = mysqli_fetch_assoc($result)) {
+        echo "id: " . $row["id"] . $row[" pet_name "] . $row["breed"] . $row[" "] . $row["age"] . $row["comments"] . $row["image"] . $row["date_added"] . $row["gender"] . $row["size"] . $row["adopt_status"] . "<br>";
+    }
+} else {
+    echo "0 results";
+}
 
 
 
@@ -134,24 +132,23 @@ function test_input($data)
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form Registration Page</title>
     <link rel="stylesheet" href="./styles/footer.css">
-    <link rel="stylesheet" href="./styles/finalproject.css"> 
+    <link rel="stylesheet" href="./styles/finalproject.css">
     <link rel="stylesheet" href="./styles/form-reg.css" type="text/css">
     <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/ffcfe413d5.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
 
-<?php include("./final_final_project/nav.php"); ?>
+    <?php include("./final_final_project/nav.php"); ?>
     <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
 
         <div id="form">
             <h1>Registration Form</h1>
             <br>
-            
-            <h4 class="required"><i class="fas fa-paw"></i>  Required</h4>
+
+            <h4 class="required"><i class="fas fa-paw"></i> Required</h4>
             <br>
             <br>
             <div id="name">
@@ -180,28 +177,21 @@ function test_input($data)
 
             <div id="gender">
                 <p>Gender <span class="error"><i class="fas fa-paw"></i> <?php echo $genderErr; ?></span></p>
-                <ul><input type="radio"  name="gender"
-                        <?php if (isset($gender)  && $gender == "female") echo "checked"; ?> value="female"> Female</ul>
-                <ul><input type="radio"  name="gender" <?php if (isset($gender)  && $gender == "male") echo "checked"; ?>
-                        value="male"> Male</ul>
+                <ul><input type="radio" name="gender" <?php if (isset($gender)  && $gender == "female") echo "checked"; ?> value="female"> Female</ul>
+                <ul><input type="radio" name="gender" <?php if (isset($gender)  && $gender == "male") echo "checked"; ?> value="male"> Male</ul>
 
             </div>
             <br>
 
             <div id="weight">
                 <p>Size <span class="error"><i class="fas fa-paw"></i> <?php echo $weightErr; ?></span> </p>
-                <ul><input type="radio" name="weight"
-                        <?php if (isset($weight)  && $weight == "small") echo "checked"; ?> value="small"> > 10 lbs</ul>
-                <ul><input type="radio" name="weight"
-                        <?php if (isset($weight)  && $weight == "medium") echo "checked"; ?> value="medium"> 10 - 25 lbs
+                <ul><input type="radio" name="weight" <?php if (isset($weight)  && $weight == "small") echo "checked"; ?> value="small"> > 10 lbs</ul>
+                <ul><input type="radio" name="weight" <?php if (isset($weight)  && $weight == "medium") echo "checked"; ?> value="medium"> 10 - 25 lbs
                 </ul>
-                <ul><input type="radio" name="weight"
-                        <?php if (isset($weight)  && $weight == "large") echo "checked"; ?> value="large"> 26 - 50 lbs
+                <ul><input type="radio" name="weight" <?php if (isset($weight)  && $weight == "large") echo "checked"; ?> value="large"> 26 - 50 lbs
                 </ul>
-                <ul><input type="radio" name="weight"
-                        <?php if (isset($weight)  && $weight == "xlarge") echo "checked"; ?> value="xlarge">
-                    < 50 lbs</ul>
-                        <!-- <select id="selectWeight">
+                <ul><input type="radio" name="weight" <?php if (isset($weight)  && $weight == "xlarge") echo "checked"; ?> value="xlarge">
+                    < 50 lbs</ul> <!-- <select id="selectWeight">
                         <option value="size">Size</option>
                         <option value="S">Small (> 10 lbs)</option>
                         <option value="M">Medium (11 - 25 lbs)</option>
@@ -214,8 +204,7 @@ function test_input($data)
             <!-- comment section -->
             <div id="comment">
                 <p>Details about your dog:</p>
-                <textarea name="comment" class="ta" rows="5" cols="40"
-                    placeholder="Required - Medicine needed, injuries, visits up to date?, etc"><?php echo $comment; ?></textarea>
+                <textarea name="comment" class="ta" rows="5" cols="40" placeholder="Required - Medicine needed, injuries, visits up to date?, etc"><?php echo $comment; ?></textarea>
             </div>
             <br>
 

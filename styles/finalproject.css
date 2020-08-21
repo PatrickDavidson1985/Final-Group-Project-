@@ -3,8 +3,14 @@
   margin: 0;
 }
 
-body {
+/*body {
   background-image: url(https://images.unsplash.com/photo-1567459169668-95d355371bda?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1949&q=80);
+}*/
+
+body {
+  background-image: url(../image/photo-1533460004989-cef01064af7e.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 /*nav styles*/
@@ -26,6 +32,7 @@ nav ul {
 
 nav li {
   padding: 20px;
+  font-family: "Acme", sans-serif;
 }
 /*end nav styles"*/
 
@@ -33,15 +40,17 @@ nav li {
 .container .carousel {
   margin-top: 20px;
   height: 150px;
-  background-color: rgb(255, 255, 255, 0.7);
+  background-color: rgb(255, 255, 255, 0.5);
   display: flex;
   flex-direction: column;
 }
 
 .container .carousel h1,
 p {
+  padding-top: 15px;
   display: flex;
   justify-content: center;
+  font-family: "Great Vibes", cursive;
 }
 
 .container h1 {
@@ -81,11 +90,21 @@ body .fire-hydrant-container {
 .fire-hydrant-container .text-box {
   width: 850px;
   background-color: rgb(255, 255, 255, 0.7);
+  align-items: center;
+  padding: 55px 55px 0 55px;
+  margin-bottom: 20px;
 }
 
+.fire-hydrant-container .text-box .shadow {
+  color: rgb(4, 94, 250);
+  text-shadow: 0 0.2rem 1px rgb(19, 102, 44);
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+}
 .fire-hydrant-container .text-box p {
   color: rgb(4, 94, 250);
   font-size: 30px;
   font-weight: bold;
-  align-content: center;
+  text-align: center;
 }

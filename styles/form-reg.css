@@ -1,13 +1,13 @@
 * {
-    padding: 0;
-    margin: 0;
-  }
-  
-  body {
-    background-image: url("https://images.unsplash.com/photo-1567459169668-95d355371bda?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1949&q=80");
-  }
+  padding: 0;
+  margin: 0;
+}
 
-  /* form background */
+body {
+  background-image: url("https://images.unsplash.com/photo-1567459169668-95d355371bda?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1949&q=80");
+}
+
+/* form background */
 #form {
   margin: 5%;
   background-color: rgb(255, 255, 255, 0.7);
@@ -16,7 +16,7 @@
 /* paw print errors */
 .error {
   color: darkblue;
-  text-shadow: 0 0.10rem 1px white;
+  text-shadow: 0 0.1rem 1px white;
   font-size: 15px;
 }
 
@@ -39,45 +39,45 @@
 }
 
 /* inside input box */
-.box  {
+.box {
   width: 50%;
   height: 2.5rem;
   color: darkblue;
   font-size: 20px;
   background-color: cornsilk;
-  font-family: 'Acme', sans-serif;
+  font-family: "Acme", sans-serif;
 }
 
 /* Header */
-h1  {
+h1 {
   color: rgb(4, 94, 250);
-  text-shadow: 0 0.10rem 1px white;
+  text-shadow: 0 0.1rem 1px white;
   text-align: center;
   font-weight: bolder;
-  font-family: 'Acme', sans-serif;
+  font-family: "Acme", sans-serif;
 }
 
 /* subtitle */
 .required {
   color: darkblue;
   text-align: center;
-  font-family: 'Acme', sans-serif;
+  font-family: "Acme", sans-serif;
 }
 
 /* input placeholders */
 ::placeholder {
   color: rgb(4, 94, 250);
   text-align: center;
-  font-family: 'Acme', sans-serif;
+  font-family: "Acme", sans-serif;
 }
 
 /* Gender, Size, Details */
 p {
   color: rgb(4, 94, 250);
-  text-shadow: 0 0.10rem 1px white;
+  text-shadow: 0 0.1rem 1px white;
   font-size: 30px;
   font-weight: bolder;
-  font-family: 'Acme', sans-serif;
+  font-family: "Acme", sans-serif;
 }
 
 /*  Gender options */
@@ -85,7 +85,7 @@ p {
   text-align: center;
   color: darkblue;
   font-size: 20px;
-  font-family: 'Acme', sans-serif;
+  font-family: "Acme", sans-serif;
 }
 
 /* Size options */
@@ -93,12 +93,12 @@ p {
   text-align: center;
   color: darkblue;
   font-size: 20px;
-  font-family: 'Acme', sans-serif;
+  font-family: "Acme", sans-serif;
 }
 
 /* comment box ID */
 #comments {
-text-align: center;
+  text-align: center;
 }
 
 /* comment text area */
@@ -108,8 +108,7 @@ text-align: center;
   color: rgb(4, 94, 250);
   font-size: 20px;
   background-color: cornsilk;
-  font-family: 'Acme', sans-serif;
-
+  font-family: "Acme", sans-serif;
 }
 
 /* Photo text  */
@@ -117,7 +116,7 @@ text-align: center;
   text-align: center;
   color: darkblue;
   font-size: 20px;
-  font-family: 'Acme', sans-serif;
+  font-family: "Acme", sans-serif;
 }
 
 .file {
@@ -128,20 +127,19 @@ text-align: center;
   text-align: center;
   color: darkblue;
   font-size: 20px;
-  font-family: 'Acme', sans-serif;
+  font-family: "Acme", sans-serif;
 }
 
 /* Submit button */
 #button {
   text-align: center;
   padding-bottom: 30px;
-  
 }
-.submit{
-   background-color: rgb(4, 94, 250);
-   color: blanchedalmond;
-   font-size: 20px;
-   width: 7rem;
-   height: 3rem;
-   font-family: 'Acme', sans-serif;
- }
+.submit {
+  background-color: rgb(4, 94, 250);
+  color: blanchedalmond;
+  font-size: 20px;
+  width: 7rem;
+  height: 3rem;
+  font-family: "Acme", sans-serif;
+}

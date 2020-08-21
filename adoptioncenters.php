@@ -162,10 +162,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form Registration Page</title>
+    <title>Adoption Centers Form Registration Page</title>
 
-    <link rel="stylesheet" href="./styles/finalproject.css">
     <link rel="stylesheet" href="./styles/footer.css">
+    <link rel="stylesheet" href="./styles/finalproject.css">
     <link rel="stylesheet" href="./styles/form-reg.css" type="text/css">
     <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -240,8 +240,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <textarea name="comments" class="ta" rows="5" cols="40" placeholder="Required - Medicine needed, injuries, visits up to date?, etc"><?php echo $comments; ?></textarea>
             </div>
             <br>
-            
- <!-- upload image section -->
+
+            <!-- upload image section -->
             <div id="image">
                 Select image to upload:
                 <input type="text" name="image" id="fileToUpload">
@@ -258,14 +258,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </div>
             <br>
 
-           
-          
-            
+
+
+
             <div id="button">
                 <input type="submit" class="submit" name="submit" value="Submit">
             </div>
         </div>
     </form>
+
     <?php include("footer.php"); ?>
 </body>
 

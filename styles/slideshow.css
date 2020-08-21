@@ -1,77 +1,75 @@
 body {
-    background-image: url(../image/photo-1533460004989-cef01064af7e.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
+  background-image: url(../image/photo-1533460004989-cef01064af7e.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
-
 
 /* automove img */
 
 .intro {
-    max-width: 50%;
-    height: auto;
-    /* position: relative; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    letter-spacing: 0.1rem;
-    padding-bottom: 50px;
-    padding-top: 50px;
+  max-width: 50%;
+  height: auto;
+  /* position: relative; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.1rem;
+  padding-bottom: 50px;
+  padding-top: 50px;
+  margin-bottom: 450px;
 }
 
 .intro-slideshow img {
-    border-radius: 15px;
-    position: absolute;
-    top: 18%;
-    left: 15%;
-    width: 70%;
-    height: 80%;
-    object-fit: cover;
-    z-index: -1;
-    opacity: 0;
-    transition: opacity 0.75s ease-in-out;
+  border-radius: 15px;
+  position: absolute;
+  top: 18%;
+  left: 15%;
+  width: 70%;
+  height: 80%;
+  object-fit: cover;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.75s ease-in-out;
 }
 
-
-    .intro .intro-main {
-    width: 175px;    
-    height: 100px;
-    color: rgb(175, 87, 4);
-    background-color: rgb(255, 255, 255, 0.7);
-    border-radius: 50%;
-    padding-top: 15px;
-    font-family: 'Petit Formal Script', cursive;
-    line-height: 15px;
-    font-size: .25rem;
-    margin-bottom: 280px;
-    /*opacity: 0.5;*/
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+.intro .intro-main {
+  width: 175px;
+  height: 100px;
+  color: rgb(175, 87, 4);
+  background-color: rgb(255, 255, 255, 0.7);
+  border-radius: 50%;
+  padding-top: 15px;
+  font-family: "Petit Formal Script", cursive;
+  line-height: 15px;
+  font-size: 0.25rem;
+  /*opacity: 0.5;*/
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .intro h1 {
-    font-size: 4rem;
-    margin-bottom: 0.75rem;
+  font-size: 4rem;
+  margin-bottom: 0.75rem;
 }
 
 .intro p {
-    font-size: 1.75rem;
-    font-family: 'Great Vibes', cursive;
+  font-size: 1.75rem;
+  font-family: "Great Vibes", cursive;
 }
 
 @media (max-width: 700px) {
-    html {
-        font-size: 12px;
-    }
-    .intro-header {
-        padding: 1.5rem 2rem;
-    }
-    .intro h1 {
-        font-size: 2.5rem;
-    }
-    .intro p {
-        font-size: 1.25rem;
-    }
+  html {
+    font-size: 12px;
+  }
+  .intro-header {
+    padding: 1.5rem 2rem;
+  }
+  .intro h1 {
+    font-size: 2.5rem;
+  }
+  .intro p {
+    font-size: 1.25rem;
+  }
 }
