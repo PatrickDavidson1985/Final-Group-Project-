@@ -2,7 +2,7 @@
 //Database Connection
 $serverpet_name = "localhost";
 $userpet_name = "root";
-$password = "activesubwoofer2015";
+$password = "19Lilsis71";
 $dataBase = "final_project_database";
 
 $conn = mysqli_connect($serverpet_name,$userpet_name,$password,$dataBase);

@@ -3,9 +3,15 @@
     margin: 0;
 }
 
-body {
+/*body {
     background-image: url("https://images.unsplash.com/photo-1567459169668-95d355371bda?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1949&q=80");
-}
+}*/ 
+
+body {
+    background-image: url(../image/photo-1533460004989-cef01064af7e.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
 
 
 /* form background */
